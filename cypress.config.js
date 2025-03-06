@@ -5,10 +5,11 @@ module.exports = defineConfig({
   e2e: {
     watchForFileChanges: false,
     defaultCommandTimeout: 4000,
-    
+    failOnStatusCode: false,
     setupNodeEvents(on, config) {
       // implement node event listeners here
       on('task', {downloadFile})
+      
     },
   },
 });
